@@ -29,7 +29,7 @@ async function run() {
     console.log(`token: ${token}`);
 
     // Запрос к item
-    const itemResponse = await axios.get(itemUrl, { headers: headers });
+    const itemResponse = await axios.post(itemUrl, { headers: headers });
 
     console.log(itemResponse.data);
   } catch (error) {

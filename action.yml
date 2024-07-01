@@ -1,0 +1,21 @@
+name: 'API Request Action'
+description: 'Performs API requests with authorization'
+inputs:
+  api_url:
+    description: 'API Server URL'
+    required: true
+  login:
+    description: 'Login'
+    required: true
+  password:
+    description: 'Password'
+    required: true
+  command:
+    description: 'Command'
+    required: true
+  id:
+    description: 'Item ID'
+    required: true
+runs:
+  using: 'node12'
+  main: 'index.js'

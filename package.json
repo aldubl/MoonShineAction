@@ -1,0 +1,10 @@
+{
+  "name": "api-request-action",
+  "version": "1.0.0",
+  "description": "GitHub Action for making API requests with authorization",
+  "main": "index.js",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "axios": "^0.21.1"
+  }
+}

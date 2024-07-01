@@ -12,16 +12,21 @@ async function run() {
     const authUrl = `${apiUrl}/auth/login`;
     const itemUrl = `${apiUrl}/item/${command}/${id}`;
 
+    console.log(`authUrl: ${authUrl}`);
+    console.log(`itemUrl: ${itemUrl}`);
+
     // Авторизация
     const authResponse = await axios.post(authUrl, {
       login: login,
       password: password
     });
 
-    const token = authResponse.data.token;
+    const token = authResponse.data.tokken;
     const headers = {
       'Authorization': `Bearer ${token}`
     };
+
+    console.log(`token: ${token}`);
 
     // Запрос к item
     const itemResponse = await axios.get(itemUrl, { headers: headers });
